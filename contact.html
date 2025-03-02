@@ -1,0 +1,42 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">PayAPI</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact-container">
+        <div class="contact-box">
+            <h1>Contact </h1>
+            <p>En kısa sürede sizinle iletişime geçilecektir</p>
+            <form action="https://formspree.io/f/mnqeyqjr" method="POST">
+                <div class="input-box">
+                    <i class="user"></i>
+                    <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="input-box">
+                    <i class="e mail"></i>
+                    <input type="email" name="email" placeholder="E-mail adresiniz" required>
+                </div>
+                <div class="input-box">
+                    <i class="comment user"></i>
+                    <textarea name="message" placeholder="Bizimle iltişime geçmek iştediğiniz konu nedir?" required></textarea>
+                </div>
+                <button type="submit" class="contact-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    </body>
+</html>
