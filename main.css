@@ -9,6 +9,16 @@ header {
     align-items: center;
     padding: 20px 10%;
     background: white;
+    position: relative;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #a29d9d;
 }
 .logo {
     font-size: 24px;
@@ -31,6 +41,40 @@ nav ul li a {
     border-radius: 20px;
     cursor: pointer;
 }
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Başlangıçta gizli olacak */
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }}
+
+    .nav-links.show {
+        max-height: 500px; /* Menü açıldığında görünür olacak */
+    }
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
 .hero {
     display: flex;
     align-items: center;
