@@ -11,6 +11,7 @@ header {
     background: white;
     position: relative;
 }
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -41,18 +42,22 @@ nav ul li a {
     border-radius: 20px;
     cursor: pointer;
 }
-.hamburger-menu {
-    display: none;
+.menu-toggle {
     font-size: 24px;
-    background: none;
+    background: #007bff;
     border: none;
     cursor: pointer;
+    display: none;
 }
+
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
     .nav-links {
-        display: none; /* Başlangıçta gizli olacak */
+        display: none; 
         flex-direction: column;
-        background: white;
+        background: rgb(60, 57, 57);
         position: absolute;
         top: 60px;
         right: 10%;
@@ -64,16 +69,14 @@ nav ul li a {
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
     }}
-
     .nav-links.show {
-        max-height: 500px; /* Menü açıldığında görünür olacak */
+        display: flex; 
+        max-height: 700px; /* Menü açıldığında yüksekliği arttır */
+    overflow: visible; 
+
     }
     .nav-links li {
         padding: 10px 0;
-    }
-
-    .hamburger-menu {
-        display: block;
     }
 .hero {
     display: flex;
